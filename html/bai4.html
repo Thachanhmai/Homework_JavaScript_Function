@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tính Tiền Cáp</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center p-5">
+    <div class="bg-white w-full max-w-3xl p-8 rounded-xl shadow-lg">
+      <h1 class="text-2xl font-bold text-center mb-8">TÍNH TIỀN CÁP</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <!-- Card mã khách hàng -->
+        <div class="bg-blue-50 p-5 rounded-lg border">
+          <h3 class="font-bold mb-3">Mã khách hàng</h3>
+
+          <input
+            type="text"
+            id="customerCode"
+            placeholder="Nhập mã khách hàng..."
+            class="w-full p-3 border rounded-lg bg-white"
+          />
+        </div>
+
+        <!-- Card loại khách hàng -->
+        <div class="bg-blue-50 p-5 rounded-lg border">
+          <h3 class="font-bold mb-3">Loại khách hàng</h3>
+
+          <select
+            id="customerType"
+            class="w-full p-3 border rounded-lg bg-white"
+          >
+            <option value="">-- Chọn loại khách hàng --</option>
+            <option value="residential">Nhà dân</option>
+            <option value="business">Doanh nghiệp</option>
+          </select>
+        </div>
+
+        <!-- Card số kết nối -->
+        <div
+          id="connectionCard"
+          class="hidden bg-blue-50 p-5 rounded-lg border"
+        >
+          <h3 class="font-bold mb-3">Số kết nối</h3>
+
+          <input
+            type="number"
+            id="connections"
+            placeholder="Nhập số kết nối..."
+            min="0"
+            step="1"
+            disabled
+            class="w-full p-3 border rounded-lg bg-white"
+          />
+        </div>
+
+        <!-- Card số kênh cao cấp -->
+        <div class="bg-blue-50 p-5 rounded-lg border">
+          <h3 class="font-bold mb-3">Số kênh cao cấp</h3>
+
+          <input
+            type="number"
+            id="premiumChannels"
+            placeholder="Nhập số kênh cao cấp..."
+            min="0"
+            step="1"
+            class="w-full p-3 border rounded-lg bg-white"
+          />
+        </div>
+      </div>
+
+      <!-- Button tính tiền cáp -->
+      <button
+        type="button"
+        id="btnTinhTienCap"
+        class="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg"
+      >
+        TÍNH TIỀN CÁP
+      </button>
+
+      <!-- Khu vực hiển thị kết quả -->
+      <div id="result" class="hidden mt-6 p-5 rounded-lg"></div>
+    </div>
+
+    <!-- Liên kết JavaScript -->
+    <script src="../src/bai4.js" defer></script>
+  </body>
+</html>

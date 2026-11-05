@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tính Thuế Thu Nhập Cá Nhân</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center p-5">
+    <div class="bg-white w-full max-w-3xl p-8 rounded-xl shadow-lg">
+      <h1 class="text-2xl font-bold text-center mb-8">
+        TÍNH THUẾ THU NHẬP CÁ NHÂN
+      </h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <!-- Card họ tên -->
+        <div class="bg-blue-50 p-5 rounded-lg border">
+          <h3 class="font-bold mb-3">Họ tên</h3>
+
+          <input
+            type="text"
+            id="fullName"
+            placeholder="Nhập họ tên..."
+            class="w-full p-3 border rounded-lg bg-white"
+          />
+        </div>
+
+        <!-- Card tổng thu nhập năm -->
+        <div class="bg-blue-50 p-5 rounded-lg border">
+          <h3 class="font-bold mb-3">Tổng thu nhập năm</h3>
+
+          <input
+            type="number"
+            id="annualIncome"
+            placeholder="Nhập thu nhập (triệu đồng)..."
+            min="0"
+            step="0.01"
+            class="w-full p-3 border rounded-lg bg-white"
+          />
+
+          <p class="text-sm text-gray-500 mt-2">
+            Ví dụ: 300 tương đương 300 triệu đồng.
+          </p>
+        </div>
+
+        <!-- Card số người phụ thuộc -->
+        <div class="bg-blue-50 p-5 rounded-lg border">
+          <h3 class="font-bold mb-3">Số người phụ thuộc</h3>
+
+          <input
+            type="number"
+            id="dependents"
+            placeholder="Nhập số người phụ thuộc..."
+            min="0"
+            step="1"
+            class="w-full p-3 border rounded-lg bg-white"
+          />
+        </div>
+      </div>
+
+      <!-- Button tính thuế -->
+      <button
+        type="button"
+        id="btnTinhThue"
+        class="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg"
+      >
+        TÍNH VÀ XUẤT THUẾ
+      </button>
+
+      <!-- Khu vực hiển thị kết quả -->
+      <div id="result" class="hidden mt-6 p-5 rounded-lg"></div>
+    </div>
+
+    <script src="../src/bai3.js" defer></script>
+  </body>
+</html>

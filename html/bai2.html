@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tính Tiền Điện</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center p-5">
+    <div class="bg-white w-full max-w-2xl p-8 rounded-xl shadow-lg">
+      <h1 class="text-2xl font-bold text-center mb-8">TÍNH TIỀN ĐIỆN</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <!-- Card nhập tên -->
+        <div class="bg-blue-50 p-5 rounded-lg border">
+          <h3 class="font-bold mb-3">Tên khách hàng</h3>
+
+          <input
+            type="text"
+            id="customerName"
+            placeholder="Nhập tên khách hàng..."
+            class="w-full p-3 border rounded-lg bg-white"
+          />
+        </div>
+
+        <!-- Card nhập số điện -->
+        <div class="bg-blue-50 p-5 rounded-lg border">
+          <h3 class="font-bold mb-3">Số điện tiêu thụ</h3>
+
+          <input
+            type="number"
+            id="electricity"
+            placeholder="Nhập số Kw..."
+            min="0"
+            step="0.01"
+            class="w-full p-3 border rounded-lg bg-white"
+          />
+        </div>
+      </div>
+
+      <!-- Button tính tiền -->
+      <button
+        type="button"
+        onclick="tinhTienDien()"
+        class="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg"
+      >
+        TÍNH TIỀN ĐIỆN
+      </button>
+
+      <!-- Kết quả -->
+      <div
+        id="result"
+        class="hidden mt-6 p-5 rounded-lg bg-green-100 text-green-700"
+      ></div>
+    </div>
+
+    <script src="../src/bai2.js"></script>
+  </body>
+</html>
