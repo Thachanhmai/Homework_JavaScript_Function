@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Lý Tuyển Sinh</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center p-5">
+    <div class="bg-white w-full max-w-4xl p-8 rounded-xl shadow-lg">
+      <h1 class="text-2xl font-bold text-center mb-8">QUẢN LÝ TUYỂN SINH</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <!-- Card điểm chuẩn -->
+        <div class="bg-blue-50 p-5 rounded-lg border">
+          <h3 class="font-bold mb-3">Điểm chuẩn</h3>
+          <input
+            type="number"
+            id="passingScore"
+            placeholder="Nhập điểm chuẩn..."
+            min="0"
+            step="0.01"
+            class="w-full p-3 border rounded-lg bg-white"
+          />
+        </div>
+
+        <!-- Card môn học 1 -->
+        <div class="bg-blue-50 p-5 rounded-lg border">
+          <h3 class="font-bold mb-3">Điểm môn học 1</h3>
+          <input
+            type="number"
+            id="subject1"
+            placeholder="Nhập điểm môn 1..."
+            min="0"
+            max="10"
+            step="0.01"
+            class="w-full p-3 border rounded-lg bg-white"
+          />
+        </div>
+
+        <!-- Card môn học 2 -->
+        <div class="bg-blue-50 p-5 rounded-lg border">
+          <h3 class="font-bold mb-3">Điểm môn học 2</h3>
+          <input
+            type="number"
+            id="subject2"
+            placeholder="Nhập điểm môn 2..."
+            min="0"
+            max="10"
+            step="0.01"
+            class="w-full p-3 border rounded-lg bg-white"
+          />
+        </div>
+
+        <!-- Card môn học 3 -->
+        <div class="bg-blue-50 p-5 rounded-lg border">
+          <h3 class="font-bold mb-3">Điểm môn học 3</h3>
+          <input
+            type="number"
+            id="subject3"
+            placeholder="Nhập điểm môn 3..."
+            min="0"
+            max="10"
+            step="0.01"
+            class="w-full p-3 border rounded-lg bg-white"
+          />
+        </div>
+
+        <!-- Card khu vực -->
+        <div class="bg-blue-50 p-5 rounded-lg border">
+          <h3 class="font-bold mb-3">Ưu tiên khu vực</h3>
+          <select id="region" class="w-full p-3 border rounded-lg bg-white">
+            <option value="">-- Chọn khu vực --</option>
+            <option value="A">Khu vực A</option>
+            <option value="B">Khu vực B</option>
+            <option value="C">Khu vực C</option>
+            <option value="X">Không ưu tiên (X)</option>
+          </select>
+        </div>
+
+        <!-- Card đối tượng -->
+        <div class="bg-blue-50 p-5 rounded-lg border">
+          <h3 class="font-bold mb-3">Ưu tiên đối tượng</h3>
+          <select id="category" class="w-full p-3 border rounded-lg bg-white">
+            <option value="">-- Chọn đối tượng --</option>
+            <option value="1">Đối tượng 1</option>
+            <option value="2">Đối tượng 2</option>
+            <option value="3">Đối tượng 3</option>
+            <option value="0">Không ưu tiên (0)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Button xem kết quả -->
+      <button
+        type="button"
+        onclick="tinhKetQuaTuyenSinh()"
+        class="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg"
+      >
+        XEM KẾT QUẢ
+      </button>
+
+      <!-- Kết quả -->
+      <div
+        id="result"
+        class="hidden mt-6 p-5 rounded-lg whitespace-pre-line"
+      ></div>
+    </div>
+
+    <script src="./src/bai1.js"></script>
+  </body>
+</html>
